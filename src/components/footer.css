@@ -1,0 +1,11 @@
+.footer-content {
+    background-color: #f2f4f8;
+}
+
+.footer-item {
+    color: #5a5a5a;
+}
+
+.footer-item:hover {
+    text-decoration: underline !important;
+}

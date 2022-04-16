@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.item {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.label {
+    box-sizing: border-box;
+    color: #323232;
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.title-label {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    padding: 0;
+
+    font-size: 25px;
+    font-weight: bold;
+    color: #d3d3d3 !important;
+    text-decoration: line-through #fff;
+    margin-right: 20px;
+}

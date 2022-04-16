@@ -1,0 +1,14 @@
+.main-container {
+    background-color: #f2f4f8 !important;
+}
+
+.bullet {
+    line-height: 1.75rem;
+    color: #5a5a5a;
+    word-wrap: break-word;   
+}
+
+.bullets-card:hover {
+    background-color: #fff !important;
+    /* height: 230px; */
+}

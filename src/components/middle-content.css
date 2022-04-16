@@ -1,0 +1,48 @@
+.contianer-row {
+    height: 300px;
+}
+
+.text-black {
+    color: #262626;;
+    text-align: start;
+    word-wrap: break-word;  
+}
+
+.btn-text {
+    font-weight: 600;
+    line-height: 1.375;
+    letter-spacing: 0;
+}
+
+.card-img-top {
+    height: 160px;
+    width: 160px;
+}
+
+.card {
+    border: none !important;
+    background-color:#f2f4f8 !important;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #e6e8ec !important;
+}
+
+.side-title {
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    line-height: 1.375;
+    letter-spacing: 0;
+}
+
+.card-title {
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+}
+
+.card, .card-header, .card-body, .card-footer, .card-img-top{
+    border-radius:0px !important;
+}
+
+

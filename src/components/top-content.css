@@ -1,0 +1,62 @@
+.top-content {
+    background-color: #f4f4f4;
+}
+
+.content {
+    height: calc(100vh - 51px);
+    width: 100%;
+}
+
+.content-title {
+    direction: ltr;
+    color: #262626;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    box-sizing: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: right;
+}
+
+.left-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    position: relative;
+    text-align: right;
+}
+
+.container {
+    position: relative;
+    text-align: right;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0.5rem;
+}
+
+.share-btn {
+    padding-top: 0.6rem !important;
+    padding-bottom: 0.6rem !important;
+    border-radius: 0px !important;
+}
+
+.title-2 {
+    font-size: 0.6rem !important;
+    color: #525252 !important;
+    line-height: 1.4 !important;
+    font-weight: bolder !important;
+}
+
+.main-title {
+    font-weight: bold !important;
+    /* color: #f4f4f4; */
+}
