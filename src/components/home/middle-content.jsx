@@ -1,9 +1,9 @@
-import writeImage from './../img/lets-write.jpg';
-import writeImage1 from './../img/write2.jpg';
-import writeImage2 from './../img/write3.jpg';
-import writeImage3 from './../img/write8.jpg';
-import writeImage4 from './../img/my_story.jpg';
-import writeImage5 from './../img/once-upon-a-time.jpg';
+import writeImage from './../../img/lets-write.jpg';
+import writeImage1 from './../../img/write2.jpg';
+import writeImage2 from './../../img/write3.jpg';
+import writeImage3 from './../../img/write8.jpg';
+import writeImage4 from './../../img/my_story.jpg';
+import writeImage5 from './../../img/once-upon-a-time.jpg';
 import './middle-content.css';
 import React from 'react';
 

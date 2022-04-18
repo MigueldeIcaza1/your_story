@@ -7,7 +7,7 @@ import Footer from './footer';
 function Home() {
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             <TopContent />
             <MiddleContent />
             <BottomContent />

@@ -1,0 +1,145 @@
+import './contact.css';
+import React from 'react';
+
+export class Contact extends React.Component {
+    render() {
+        return (
+            <div>
+                <div id='header' className='contact-container p-4 pb-6'>
+                    <div className='row'>
+
+                        <div className='col-md-2'>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="home">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                                </ol>
+                            </nav>
+                        </div>
+
+                        <div className='col-md-10 d-flex'>
+                            <div className='col-md-5 leadspace leadspace-padding'>
+                                <div className='col-md-8'>
+                                    <h1 class="leadSpace_header">Contact WSEG Research</h1>
+                                    <p>Please fill out the form below so the appropriate representative from WESG Research can contact you.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div role="presentation" className="col-md-7 float-end line_space Lines_container__36j4i">
+                                    <svg className="Lines_image__2O61U Lines_imageTop__27foq" height="0" viewBox="0 0 100 100" width="0" xmlns="http://www.w3.org/2000/svg"><line class="Lines_line__2-BFp" x1="-25%" y1="50%" x2="125%" y2="50%" vector-effect="non-scaling-stroke"></line></svg>
+                                    <svg className="Lines_image__2O61U Lines_imageBottom__12Ll5" height="0" viewBox="0 0 100 100" width="0" xmlns="http://www.w3.org/2000/svg"><line class="Lines_line__2-BFp" x1="-25%" y1="50%" x2="125%" y2="50%" vector-effect="non-scaling-stroke"></line></svg>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id='form'>
+                    <form className='row m-0 p-0'>
+                        <div className='col-md-2'></div>
+                        <div className='col-md-9 pb-5'>
+                            <div class="form_note float-start">All fields are required unless marked optional.</div>
+                            <br/>
+
+                            <div className='pt-3'>
+                                <div class="row row-cols-2">
+
+                                    <div class="col-md-5 pb-4">
+                                        <div className="bx--form-item bx--text-input-wrapper">
+                                            <label for="firstName" className="bx--label">First name</label>
+                                            <div class="bx--text-input__field-outer-wrapper">
+                                                <div className="bx--text-input__field-wrapper">
+                                                    <input type="text" placeholder="Ada" class="bx--text-input bx--text__input" title="" name="firstName" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 pb-4">
+                                        <div className="bx--form-item bx--text-input-wrapper">
+                                            <label for="lastName" className="bx--label">Last name</label>
+                                            <div class="bx--text-input__field-outer-wrapper">
+                                                <div className="bx--text-input__field-wrapper">
+                                                    <input type="text" placeholder="Lovelace" class="bx--text-input bx--text__input" title="" name="lastName" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 pb-4">
+                                        <div className="bx--form-item bx--text-input-wrapper">
+                                            <label for="emailAddress" className="bx--label">Email address</label>
+                                            <div class="bx--text-input__field-outer-wrapper">
+                                                <div className="bx--text-input__field-wrapper">
+                                                    <input type="text" placeholder="Lovelace@example.com" class="bx--text-input bx--text__input" title="" name="emailAddress" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 pb-4">
+                                        <div className="bx--form-item bx--text-input-wrapper">
+                                            <label for="confirmEmailAddress" className="bx--label">Confirm email address</label>
+                                            <div class="bx--text-input__field-outer-wrapper">
+                                                <div className="bx--text-input__field-wrapper">
+                                                    <input type="text" placeholder="Lovelace@example.com" class="bx--text-input bx--text__input" title="" name="confirmEmailAddress" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 pb-4">
+                                        <div className="bx--form-item bx--text-input-wrapper">
+                                            <label for="phone" className="bx--label">Phone number (optional)</label>
+                                            <div class="bx--text-input__field-outer-wrapper">
+                                                <div className="bx--text-input__field-wrapper">
+                                                    <input type="tel" placeholder="000-123-4567" class="bx--text-input bx--text__input" title="" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 pb-4">
+                                        <div className="bx--form-item bx--text-input-wrapper">
+                                            <label for="phone" className="bx--label">Job role (optional)</label>
+                                            <div class="bx--text-input__field-outer-wrapper">
+                                                <div className="bx--text-input__field-wrapper">
+                                                    <input type="text" placeholder="Technology advisor" class="bx--text-input bx--text__input" title="" name="phone"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-10 pb-4">
+                                        <div class="bx--form-item">
+                                            <label for="message" class="bx--label">Message</label>
+                                            <div class="bx--text-area__wrapper">
+                                                <textarea cols="50" rows="4" name="message" id="message" placeholder="Type your message here…" class="bx--text-area"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 pb-4"></div>
+                                    <div class="col-md-5 pb-4"><button type="submit" class="btn btn-primary share-btn col-md-6 float-right w-100 text-start">Submit</button></div>
+
+
+                                </div>
+                            </div>                  
+                            
+                            
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        );
+    }
+}
+
+export default Contact;
+

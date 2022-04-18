@@ -7,7 +7,7 @@ export class Footer extends React.Component {
             <div className='footer-content py-3'>
                 <hr className='mt-0 mx-5'/>
                 <div className='px-5 text-start'>
-                    <a href='#contact' className='px-1 footer-item'>Contact</a>
+                    <a href='contact' className='px-1 footer-item'>Contact</a>
                 </div>
             </div>
 

@@ -26,6 +26,7 @@ export class BottomContent extends React.Component {
                                         <li className='bullet'>Your friend's experience</li>
                                         <li className='bullet'>The lesson that you learnt</li>
                                         <li className='bullet'>A lesson from other's life</li>
+                                        <li className='bullet'>Lessons learned from Pandemic</li>
                                     </ul>
                                 </div>
                             </div>
@@ -40,6 +41,7 @@ export class BottomContent extends React.Component {
                                         <li className='bullet'>A story that inspired you</li>
                                         <li className='bullet'>A motivation to achieve your goal</li>
                                         <li className='bullet'>A story that you liked most</li>
+                                        <li className='bullet'>How Pandemic changed my life</li>
                                     </ul>
                                 </div>
                             </div>
@@ -53,7 +55,9 @@ export class BottomContent extends React.Component {
                                         <li className='bullet'>A message to society</li>
                                         <li className='bullet'>An idea to change the world</li>
                                         <li className='bullet'>A lesson from pandemic</li>
+                                        <li className='bullet'>Your best trip experience</li>
                                         <li className='bullet'>A funny story</li>
+                                        <li className='bullet'>A hobby that you started in this Pandemic</li>
                                     </ul>
                                 </div>
                             </div>

@@ -1,10 +1,7 @@
 import './top-content.css';
 import React from 'react';
-import writeImage from './../img/lets-write.jpg';
-import write from './../img/write.jpg';
-import write4 from './../img/write4.jpg';
-import write11 from './../img/write11.jpg';
-import write12 from './../img/write12.jpg';
+// import writeImage from './../../img/lets-write.jpg';
+import write12 from './../../img/write12.jpg';
 
 export class TopContent extends React.Component {
     render() {
