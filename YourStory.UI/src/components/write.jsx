@@ -1,7 +1,25 @@
 import './write.css';
 import React from 'react';
+import { postStory } from './../services/StoryService';
 
 export class Write extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { title: '', userName: '', tagName: '', description: '', isAnonymous: false };
+
+        this.share = this.share.bind(this);
+    }
+
+    share() {
+        const request = { title: 'test', userName: 'user1', tagName: '#abc', description: 'alkf', isAnonymous: false };
+
+        postStory(request).then(response => {
+            console.log(response);
+        });
+            
+    }
+
     render() {
         return (
             <div>
@@ -98,7 +116,8 @@ export class Write extends React.Component {
                                         </div>
                                     </div>
                                     <div className="col-md-5 pb-4">
-                                        <button type="submit" className="btn btn-primary share-btn col-md-6 float-right w-100 text-start">Share</button>
+                                        <button type="button" className="btn btn-primary share-btn col-md-6 float-right w-100 text-start"
+                                            onClick={this.share}>Share</button>
                                     </div>
 
 
