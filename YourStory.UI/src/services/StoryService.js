@@ -1,4 +1,4 @@
-const baseURL = "https://localhost:44303/api";
+import { baseURL } from './urls';
 
 export async function postStory(data) {
     const response = await fetch(`${baseURL}/story/PostStory`, {
@@ -8,3 +8,8 @@ export async function postStory(data) {
     })
     return await response.json();
 }
+
+// export async function getStories(request) {
+//     const response = await fetch(`${baseURL}/story/GetStories?pageNo=${request.pageNo}&pageSize=${request.pageSize}`);
+//     return await response.json();
+// }

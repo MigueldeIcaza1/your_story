@@ -1,10 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './App.css';
 import Header from './components/home/header';
 import Home from './components/home/home';
 import Write from './components/write';
 import Contact from './components/contact';
+import Explore from './components/explore';
+import Story from './components/story';
 
 function App() {
   return (
@@ -13,10 +16,18 @@ function App() {
       <BrowserRouter>
         <Routes>
 
+      
           <Route index element={<Home />} />
-          <Route path="home" element={<Home />}/>
-          <Route path="write" element={<Write />} />
-          <Route path="contact" element={<Contact />} />
+          <Route exact path="/home" element={<Home />}/>
+          <Route exact path="/write" element={<Write />} />
+          <Route exact path="/share" element={<Write />} />
+          <Route exact path="/explore" element={<Explore />} />          
+          <Route exact path="/grasp" element={<Explore />} />
+          <Route exact path="/writings/:id" element={<Story />} /> 
+          {/* <Route path="/writings" element={<Story />}>
+            <Route path="/:id" element={<Story />} />
+          </Route> */}
+          <Route exact path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
           
         </Routes>

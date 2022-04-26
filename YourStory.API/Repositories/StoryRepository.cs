@@ -35,39 +35,10 @@ namespace YourStory.API.Repositories
             return (result == 1);
         }
 
-        public async Task<bool> PostStoryOwnerAsync(StoryOwnerRequest request)
-        {
-            int result;
-            try
-            {
-                result = await _sqlHelper.ExecuteAsync(SqlQueries.OwnerBooking, request);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-                throw;
-            }
-            return (result == 1);
-        }
 
-        public async Task<bool> PostYourStoryAsync(YourStoryDetails request)
+        public async Task<IEnumerable<StoryDetails>> GetStories(GetStoriesRequest request)
         {
-            int result;
-            try
-            {
-                result = await _sqlHelper.ExecuteAsync(SqlQueries.CreateKeeper, request);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-                throw;
-            }
-            return (result == 1);
-        }
-
-        public async Task<IEnumerable<YourStoryDetails>> GetNearByYourStorysAsync()
-        {
-           return await _sqlHelper.QueryAsync<YourStoryDetails>(SqlQueries.GetNearByKeepers);
+           return await _sqlHelper.QueryAsync<StoryDetails>(SqlQueries.GetStories, request);
         }
     }
 }

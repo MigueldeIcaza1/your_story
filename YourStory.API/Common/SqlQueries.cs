@@ -12,15 +12,17 @@ namespace YourStory.API.Common
         public const string GetUser = @"SELECT FirstName, LastName, CreatedOn, MailId, PhoneNo, [Password]
                                                      FROM [User] WHERE MailId = @MailId AND Password = @Password";
 
-        public const string CreateStory = @"INSERT INTO Story (Title, UserName, TagName, Description, IsAnonymous)
-                                                     VALUES(@Title, @UserName, @TagName, @Description, @IsAnonymous)";
+        public const string CreateStory = @"INSERT INTO Story (Title, UserName, TagName, Description, IsAnonymous, CreatedOn)
+                                                     VALUES(@Title, @UserName, @TagName, @Description, @IsAnonymous, @CreatedOn)";
 
-        public const string OwnerBooking = @"INSERT INTO OwnerBooking (UserId, AccommodationTypeId, Days, Location)
-                                                     VALUES(@UserId, @AccommodationTypeId, @Days, @Location)";
+        public const string GetStories = @"SELECT CreatedOn,Title,UserName,TagName,Description,IsAnonymous FROM Story
+                                                    ORDER BY CreatedOn
+                                                    OFFSET(@PageNo-1)*@PageSize ROWS
+                                                    FETCH NEXT @PageSize ROWS ONLY";
 
-        public const string CreateKeeper = @"INSERT INTO Keeper (UserId, AccommodationTypeId, EstimatedFare, Location, Description, PhotoUrl, StoryId)
-                                                     VALUES(@UserId, @AccommodationTypeId, @EstimatedFare, @Location, @Description, @PhotoUrl, @StoryId)";
 
-        public const string GetNearByKeepers = "SELECT TOP 10 * FROM Keeper";
+        public const string CreateContact = @"INSERT INTO Contact (FirstName, LastName, EmailAddress, Message, PhoneNo, JobRole, CreatedOn)
+                                                     VALUES(@FirstName, @LastName, @EmailAddress, @Message, @PhoneNo, @JobRole, @CreatedOn)";
+
     }
 }

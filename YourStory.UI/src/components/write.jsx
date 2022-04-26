@@ -1,23 +1,83 @@
 import './write.css';
 import React from 'react';
 import { postStory } from './../services/StoryService';
+import { withRouter } from '../services/withRouter';
+import { ToastContainer, toast } from 'react-toastify';
 
 export class Write extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { title: '', userName: '', tagName: '', description: '', isAnonymous: false };
+
+        this.state = { title: '', userName: '', tagName: '', description: '', isAnonymous: false,
+        isTitleTouched: false, isUserNameTouched: false, isTagNameTouched: false, isDescriptionTouched: false };
 
         this.share = this.share.bind(this);
+        this.inputChange = this.inputChange.bind(this);
+        this.checkBoxChange = this.checkBoxChange.bind(this);
+        this.setIsTouched = this.setIsTouched.bind(this);
+        this.showErrorToast = this.showErrorToast.bind(this);
+    }
+
+    inputChange(property, event) {
+        this.setState({ [property]: event.target.value });
+    }
+
+    checkBoxChange(property, event) {
+        this.setState({ [property]: event.target.checked });
+    }
+
+    setIsTouched(property) {
+        this.setState({ [property]: true });
+    }
+
+    isValid() {
+        let isValid = true;
+        if (!this.state.title) {
+            isValid = false;
+            this.setState({ isTitleTouched: true });
+        }
+        if (!this.state.userName) {
+            isValid = false;
+            this.setState({ isUserNameTouched: true });
+        }
+        if (!this.state.tagName) {
+            isValid = false;
+            this.setState({ isTagNameTouched: true });
+        }
+        if (!this.state.description) {
+            isValid = false;
+            this.setState({ isDescriptionTouched: true });
+        }
+        return isValid;
     }
 
     share() {
-        const request = { title: 'test', userName: 'user1', tagName: '#abc', description: 'alkf', isAnonymous: false };
+
+        if (!this.isValid()) { return; }
+
+        const request = {
+            title: this.state.title,
+            userName: this.state.userName,
+            tagName: this.state.tagName,
+            description: this.state.description,
+            isAnonymous: this.state.isAnonymous,
+        };
 
         postStory(request).then(response => {
-            console.log(response);
+            if (response === true) { }
+            // else { this.showErrorToast(); }
+            this.props.navigate('/home');
+        }, () => { this.showErrorToast(); }
+        ).catch((error) => {
+            this.showErrorToast();
+            this.props.navigate('/home');
         });
             
+    }
+
+    showErrorToast() {
+        toast.error("Oops! Something went wrong");
     }
 
     render() {
@@ -69,12 +129,15 @@ export class Write extends React.Component {
 
                                     <div className="col-md-10 pb-4">
                                         <div className="bx--form-item bx--text-input-wrapper">
-                                            <label htmlFor="firstName" className="bx--label">Title</label>
+                                            <label htmlFor="title" className="bx--label">Title</label>
                                             <div className="bx--text-input__field-outer-wrapper">
                                                 <div className="bx--text-input__field-wrapper">
-                                                    <input type="text" placeholder="My funny story" className="bx--text-input bx--text__input" title="" name="firstName" />
+                                                    <input type="text" placeholder="My funny story" className="bx--text-input bx--text__input" title="" name="title" 
+                                                        onChange={(event) => this.inputChange('title', event)} onBlur={() => this.setIsTouched('isTitleTouched')}/>
+                                                   
                                                 </div>
                                             </div>
+                                            {this.state.isTitleTouched && !this.state.title && <span className='validation-label bx-form-requirement'>This field is required</span>}
                                         </div>
                                     </div>
 
@@ -83,9 +146,11 @@ export class Write extends React.Component {
                                             <label htmlFor="UserName" className="bx--label">User name</label>
                                             <div className="bx--text-input__field-outer-wrapper">
                                                 <div className="bx--text-input__field-wrapper">
-                                                    <input type="text" placeholder="John" className="bx--text-input bx--text__input" title="" name="userName" />
+                                                    <input type="text" placeholder="Jessie" className="bx--text-input bx--text__input" title="" name="userName" 
+                                                    onChange={(event) => this.inputChange('userName', event)} onBlur={() => this.setIsTouched('isUserNameTouched')}/>
                                                 </div>
                                             </div>
+                                            {this.state.isUserNameTouched && !this.state.userName && <span className='validation-label bx-form-requirement'>This field is required</span>}
                                         </div>
                                     </div>
 
@@ -94,9 +159,11 @@ export class Write extends React.Component {
                                             <label htmlFor="tagName" className="bx--label">Tag name</label>
                                             <div className="bx--text-input__field-outer-wrapper">
                                                 <div className="bx--text-input__field-wrapper">
-                                                    <input type="text" placeholder="#fun #life" className="bx--text-input bx--text__input" title="" name="tagName" />
+                                                    <input type="text" placeholder="#fun #life" className="bx--text-input bx--text__input" title="" name="tagName" 
+                                                    onChange={(event) => this.inputChange('tagName', event)} onBlur={() => this.setIsTouched('isTagNameTouched')}/>
                                                 </div>
                                             </div>
+                                            {this.state.isTagNameTouched && !this.state.tagName && <span className='validation-label bx-form-requirement'>This field is required</span>}
                                         </div>
                                     </div>
 
@@ -104,14 +171,17 @@ export class Write extends React.Component {
                                         <div className="bx--form-item">
                                             <label htmlFor="story" className="bx--label">Description</label>
                                             <div className="bx--text-area__wrapper">
-                                                <textarea className="bx--text-area" cols="50" rows="15" name="story" placeholder="Type your description here…"></textarea>
+                                                <textarea className="bx--text-area" cols="50" rows="15" name="story" placeholder="Type your description here…"
+                                                    onChange={(event) => this.inputChange('description', event)} onBlur={() => this.setIsTouched('isDescriptionTouched')}/>
                                             </div>
+                                            {this.state.isDescriptionTouched && !this.state.description && <span className='validation-label bx-form-requirement'>This field is required</span>}
                                         </div>
                                     </div>
 
                                     <div className="col-md-5 pb-4">
                                         <div className="bx--form-item bx--form-item-checkbox bx--checkbox-wrapper">
-                                            <input type="checkbox" className="bx--checkbox" name="acknowledgement" />
+                                            <input type="checkbox" className="bx--checkbox" name="acknowledgement" 
+                                                onChange={(event) => this.checkBoxChange('isAnonymous', event)}/>
                                             <label htmlFor="anonymous" className="bx--checkbox-label text-start"><span className="bx--checkbox-label-text">Share as <i>anonymous</i>. </span></label>
                                         </div>
                                     </div>
@@ -129,11 +199,16 @@ export class Write extends React.Component {
                     </form>
                 </div>
 
+                <ToastContainer
+                    position="top-right"
+                    autoClose={2000}
+                />
             </div>
 
         );
     }
 }
 
-export default Write;
+export default withRouter(Write);
+
 

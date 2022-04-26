@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace YourStory.API
 {
     public class Startup
@@ -54,6 +55,9 @@ namespace YourStory.API
 
             services.AddSingleton<IStoryService, StoryService>();
             services.AddSingleton<IStoryRepository, StoryRepository>();
+
+            services.AddSingleton<IContactService, ContactService>();
+            services.AddSingleton<IContactRepository, ContactRepository>();
 
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<IUserRepository, UserRepository>();

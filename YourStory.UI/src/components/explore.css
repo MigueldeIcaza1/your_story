@@ -1,0 +1,66 @@
+.explore-container {
+    color: black;
+}
+
+.story-text {
+    color: #393939 !important;
+}
+
+.post-title {
+    margin-bottom: 0 !important;
+}
+
+.post-container {
+    color: #393939 !important;
+}
+
+.post-body {
+    color: #525252 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 8px !important;
+}
+
+.ibm-pb-1 {
+    padding-bottom: 8px!important;
+}
+
+.ibm-type-b {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    letter-spacing: .01rem;
+    max-width: 30rem;
+}
+
+.article-author {
+    color: #525252 !important;
+    margin-bottom: 0 !important;
+}
+
+.ibm-type-a {
+    font-size: .75rem;
+    line-height: 1rem;
+    letter-spacing: .02rem;
+    max-width: 26.5rem;
+}
+
+.ibm-type-f {
+    font-weight: 500;
+    font-family: "IBM Plex Serif";
+}
+
+@media (min-width: 66rem) {
+    .story-font {
+        font-size: calc(1.5rem + .25 * ((100vw - 66rem)/ 16));
+        line-height: calc(1.875rem + .375 * ((100vw - 66rem)/ 16));
+        max-width: calc(39.5rem + 3.5 * ((100vw - 66rem)/ 16));
+    }
+}
+
+@media (min-width: 42rem) {
+    .story-font {
+        font-size: calc(1.25rem + .25 * ((100vw - 42rem)/ 24));
+        line-height: calc(1.625rem + .25 * ((100vw - 42rem)/ 24));
+        max-width: calc(37.5rem + 2 * ((100vw - 42rem)/ 24));
+        font-weight: 800;
+    }
+}

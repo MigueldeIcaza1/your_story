@@ -28,16 +28,6 @@ namespace YourStory.API.Controllers
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<bool>> PostStory(StoryDetails request)
         {
-            //if (request == null)
-            //{
-            //    return BadRequest();
-            //}
-
-            //if (!ModelState.IsValid)
-            //{
-            //    return BadRequest(ModelState);
-            //}
-
             var result = await _StoryService.PostStoryAsync(request);
             if (result)
             {
@@ -49,68 +39,18 @@ namespace YourStory.API.Controllers
             }
         }
 
-        // POST api/Story/PostStoryOwner
-        [HttpPost]
-        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<bool>> PostStoryOwner(StoryOwnerRequest request)
-        {
-            if (request == null)
-            {
-                return BadRequest();
-            }
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            var result = await _StoryService.PostStoryOwnerAsync(request);
-            if (result)
-            {
-                return Ok(result);
-            }
-            else
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error saving Story Owner");
-            }
-        }
-
-        // POST api/Story/PostYourStory
-        [HttpPost]
-        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<bool>> PostYourStory(YourStoryDetails request)
-        {
-            if (request == null)
-            {
-                return BadRequest();
-            }
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            var result = await _StoryService.PostYourStoryAsync(request);
-            if (result)
-            {
-                return Ok(result);
-            }
-            else
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error saving Story Keeper");
-            }
-        }
-
-        // GET api/Story/GetNearByYourStorys
+        // GET api/Story/GetStories
         [HttpGet]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<YourStoryDetails>>> GetNearByYourStorys()
+        public async Task<ActionResult<IEnumerable<StoryDetails>>> GetStories(int pageNo, int pageSize)
         {
-            var result = await _StoryService.GetNearByYourStorysAsync();
+            GetStoriesRequest request = new GetStoriesRequest();
+            request.PageNo = pageNo;
+            request.PageSize = pageSize;
+            
+            var result = await _StoryService.GetStories(request);
             return Ok(result);
         }
 

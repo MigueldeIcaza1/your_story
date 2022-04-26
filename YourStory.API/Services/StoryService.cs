@@ -20,6 +20,7 @@ namespace YourStory.API.Services
         {
             try
             {
+                request.CreatedOn = DateTime.UtcNow;
                 return await _StoryRepository.PostStoryAsync(request);
             }
             catch (Exception)
@@ -28,35 +29,14 @@ namespace YourStory.API.Services
             }
         }
 
-        public async Task<bool> PostStoryOwnerAsync(StoryOwnerRequest request)
+        public async Task<IEnumerable<StoryDetails>> GetStories(GetStoriesRequest request)
         {
             try
             {
-                return await _StoryRepository.PostStoryOwnerAsync(request);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+                if (request.PageNo <= 0) request.PageNo = 1;
+                if (request.PageSize <= 0) request.PageSize = 5;
 
-        public async Task<bool> PostYourStoryAsync(YourStoryDetails request)
-        {
-            try
-            {
-                return await _StoryRepository.PostYourStoryAsync(request);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public async Task<IEnumerable<YourStoryDetails>> GetNearByYourStorysAsync()
-        {
-            try
-            {
-                return await _StoryRepository.GetNearByYourStorysAsync();
+                return await _StoryRepository.GetStories(request);
             }
             catch (Exception)
             {

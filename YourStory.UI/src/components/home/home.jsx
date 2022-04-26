@@ -1,4 +1,4 @@
-import Header from './header';
+// import Header from './header';
 import TopContent from './top-content';
 import MiddleContent from './middle-content';
 import BottomContent from './bottom-content';
