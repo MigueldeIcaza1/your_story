@@ -123,7 +123,7 @@ export class Explore extends React.Component {
                                         // breakLabel={"..."}
                                         pageCount={this.state.pageCount/this.pageSize}
                                         // marginPagesDisplayed={2}
-                                        pageRangeDisplayed={2}
+                                        // pageRangeDisplayed={2}
                                         onPageChange={(data) => this.pageChange(data)}
                                         containerClassName={"pagination justify-content-end"}
                                         pageClassName={"page-item"}

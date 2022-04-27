@@ -43,7 +43,7 @@ namespace YourStory.API.Services
                 }
                 return resp;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 throw;
             }

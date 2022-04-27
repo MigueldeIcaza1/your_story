@@ -80,3 +80,7 @@
    line-height: 20px;
    max-height: 60px;
 }
+
+.page-link:focus {
+    box-shadow: none !important;
+}
