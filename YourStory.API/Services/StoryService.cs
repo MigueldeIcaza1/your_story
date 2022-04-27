@@ -36,7 +36,38 @@ namespace YourStory.API.Services
                 if (request.PageNo <= 0) request.PageNo = 1;
                 if (request.PageSize <= 0) request.PageSize = 5;
 
-                return await _StoryRepository.GetStories(request);
+                var resp = await _StoryRepository.GetStories(request);
+                foreach (var item in resp)
+                {
+                    item.FormatedCreatedOn = item.CreatedOn.ToString("dddd, dd MMMM yyyy");
+                }
+                return resp;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<int> GetStoriesCount()
+        {
+            try
+            {
+                return await _StoryRepository.GetStoriesCount();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<StoryDetails> GetStory(int id)
+        {
+            try
+            {
+                var resp = await _StoryRepository.GetStory(id);
+                resp.FormatedCreatedOn = resp.CreatedOn.ToString("dddd, dd MMMM yyyy");
+                return resp;
             }
             catch (Exception)
             {

@@ -1,0 +1,11 @@
+pre {
+    line-height: 1.25rem !important;
+    font-size: 1rem !important;
+    /* font-weight: 300 !important; */
+    color: #323232 !important;
+
+    white-space: pre-wrap;
+    text-align: left !important;
+    overflow-x: hidden !important;
+}
+  

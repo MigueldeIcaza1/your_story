@@ -11,6 +11,7 @@ namespace YourStory.API.Common
         IEnumerable<T> Query<T>(string sqlCmd, int? commandTimeOut = null);
         IEnumerable<T> Query<T>(string sqlCmd, object parameters, int? commandTimeOut = null);
         Task<IEnumerable<T>> QueryAsync<T>(string sqlCmd, object parameters = null, int? commandTimeOut = null);
+        Task<T> QuerySingleOrDefaultAsync<T>(string sqlCmd, object parameters = null, int? commandTimeOut = null);
         Task<int> ExecuteAsync(string sqlCmd, object parameters, int? commandTimeOut = null);
         bool ExecuteProc(string procName, DynamicParameters parameters);
         T ExecuteScalarProc<T>(string procName, DynamicParameters parameters);

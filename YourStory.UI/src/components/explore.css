@@ -36,6 +36,11 @@
     margin-bottom: 0 !important;
 }
 
+.article-tag {
+    color: #0062ff !important;
+    margin-bottom: 0 !important;
+}
+
 .ibm-type-a {
     font-size: .75rem;
     line-height: 1rem;
@@ -63,4 +68,15 @@
         max-width: calc(37.5rem + 2 * ((100vw - 42rem)/ 24));
         font-weight: 800;
     }
+}
+
+.three-line {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;  
+
+   line-height: 20px;
+   max-height: 60px;
 }

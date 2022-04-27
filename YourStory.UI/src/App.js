@@ -23,10 +23,7 @@ function App() {
           <Route exact path="/share" element={<Write />} />
           <Route exact path="/explore" element={<Explore />} />          
           <Route exact path="/grasp" element={<Explore />} />
-          <Route exact path="/writings/:id" element={<Story />} /> 
-          {/* <Route path="/writings" element={<Story />}>
-            <Route path="/:id" element={<Story />} />
-          </Route> */}
+          <Route exact path="/writing/:id" element={<Story />} /> 
           <Route exact path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
           

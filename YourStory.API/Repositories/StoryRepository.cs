@@ -35,10 +35,20 @@ namespace YourStory.API.Repositories
             return (result == 1);
         }
 
-
         public async Task<IEnumerable<StoryDetails>> GetStories(GetStoriesRequest request)
         {
            return await _sqlHelper.QueryAsync<StoryDetails>(SqlQueries.GetStories, request);
+        }
+
+        public async Task<int> GetStoriesCount()
+        {
+            return await _sqlHelper.QuerySingleOrDefaultAsync<int>(SqlQueries.GetStoriesCount, null);
+        }
+
+        public async Task<StoryDetails> GetStory(int id)
+        {
+            var response = await _sqlHelper.QueryAsync<StoryDetails>(SqlQueries.GetStory, new { id });
+            return response.FirstOrDefault();
         }
     }
 }

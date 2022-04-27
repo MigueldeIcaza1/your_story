@@ -10,5 +10,7 @@ namespace YourStory.API.Repositories
     {
         Task<bool> PostStoryAsync(StoryDetails request);
         Task<IEnumerable<StoryDetails>> GetStories(GetStoriesRequest request);
+        Task<StoryDetails> GetStory(int id);
+        Task<int> GetStoriesCount();
     }
 }

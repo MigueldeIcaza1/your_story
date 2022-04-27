@@ -42,6 +42,14 @@ namespace YourStory.API.Common
             }
         }
 
+        public async Task<T> QuerySingleOrDefaultAsync<T>(string sqlCmd, object parameters = null, int? commandTimeOut = null)
+        {
+            using (IDbConnection connection = new SqlConnection(_connectionString))
+            {
+                return await connection.QuerySingleOrDefaultAsync<T>(sqlCmd, parameters, commandTimeout: commandTimeOut);
+            }
+        }
+
         public async Task<int> ExecuteAsync(string sqlCmd, object parameters, int? commandTimeOut = null)
         {
             using (IDbConnection dbConnection = new SqlConnection(_connectionString))

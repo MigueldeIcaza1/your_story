@@ -1,4 +1,3 @@
-C:\Users\mgunti\Work2\writing\your_story\YourStory.API\obj\Debug\netcoreapp3.1\YourStory.API.csproj.AssemblyReference.cache
 C:\Users\mgunti\Work2\writing\your_story\YourStory.API\obj\Debug\netcoreapp3.1\YourStory.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\mgunti\Work2\writing\your_story\YourStory.API\obj\Debug\netcoreapp3.1\YourStory.API.AssemblyInfoInputs.cache
 C:\Users\mgunti\Work2\writing\your_story\YourStory.API\obj\Debug\netcoreapp3.1\YourStory.API.AssemblyInfo.cs
@@ -35,3 +34,4 @@ C:\Users\mgunti\Work2\writing\your_story\YourStory.API\obj\Debug\netcoreapp3.1\Y
 C:\Users\mgunti\Work2\writing\your_story\YourStory.API\obj\Debug\netcoreapp3.1\YourStory.API.dll
 C:\Users\mgunti\Work2\writing\your_story\YourStory.API\obj\Debug\netcoreapp3.1\YourStory.API.pdb
 C:\Users\mgunti\Work2\writing\your_story\YourStory.API\obj\Debug\netcoreapp3.1\YourStory.API.genruntimeconfig.cache
+C:\Users\mgunti\Work2\writing\your_story\YourStory.API\obj\Debug\netcoreapp3.1\YourStory.API.csproj.AssemblyReference.cache

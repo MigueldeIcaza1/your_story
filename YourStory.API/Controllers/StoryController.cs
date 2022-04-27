@@ -41,16 +41,40 @@ namespace YourStory.API.Controllers
 
         // GET api/Story/GetStories
         [HttpGet]
-        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<StoryDetails>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<IEnumerable<StoryDetails>>> GetStories(int pageNo, int pageSize)
         {
-            GetStoriesRequest request = new GetStoriesRequest();
-            request.PageNo = pageNo;
-            request.PageSize = pageSize;
-            
+            GetStoriesRequest request = new GetStoriesRequest
+            {
+                PageNo = pageNo,
+                PageSize = pageSize
+            };
+
             var result = await _StoryService.GetStories(request);
+            return Ok(result);
+        }
+
+        // GET api/Story/GetStoriesCount
+        [HttpGet]
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<int>> GetStoriesCount()
+        {
+            var result = await _StoryService.GetStoriesCount();
+            return Ok(result);
+        }
+
+        // GET api/Story/1
+        [HttpGet]
+        [ProducesResponseType(typeof(StoryDetails), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<StoryDetails>> GetStory(int id)
+        {
+            var result = await _StoryService.GetStory(id);
             return Ok(result);
         }
 
