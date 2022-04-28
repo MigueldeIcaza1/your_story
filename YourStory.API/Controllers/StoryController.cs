@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace YourStory.API.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    //[Route("api/[controller]/[action]")]
     [ApiController]
     public class StoryController : ControllerBase
     {
@@ -23,6 +23,7 @@ namespace YourStory.API.Controllers
 
         // POST api/Story/PostStory
         [HttpPost]
+        [Route("/api/Story/PostStory")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
@@ -41,6 +42,7 @@ namespace YourStory.API.Controllers
 
         // GET api/Story/GetStories
         [HttpGet]
+        [Route("/api/Story/GetStories")]
         [ProducesResponseType(typeof(IEnumerable<StoryDetails>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
@@ -58,6 +60,7 @@ namespace YourStory.API.Controllers
 
         // GET api/Story/GetStoriesCount
         [HttpGet]
+        [Route("/api/Story/GetStoriesCount")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
@@ -67,8 +70,9 @@ namespace YourStory.API.Controllers
             return Ok(result);
         }
 
-        // GET api/Story/1
+        // GET api/Story/GetStory/1
         [HttpGet]
+        [Route("/api/Story/GetStory")]
         [ProducesResponseType(typeof(StoryDetails), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]

@@ -9,7 +9,7 @@ using YourStory.API.Models.Contact;
 
 namespace YourStory.API.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    //[Route("api/[controller]/[action]")]
     [ApiController]
     public class ContactController : ControllerBase
     {
@@ -21,6 +21,7 @@ namespace YourStory.API.Controllers
 
         // POST api/Contact/PostContact
         [HttpPost]
+        [Route("/api/Contact/PostContact")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]

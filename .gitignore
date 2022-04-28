@@ -4,3 +4,8 @@
 
 /node_modules
 /YourStory.UI/node_modules
+
+/YourStory.API/bin
+/YourStory.API/obj
+
+/YourStory.UI/build

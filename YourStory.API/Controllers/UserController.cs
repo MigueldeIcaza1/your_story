@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace YourStory.API.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    //[Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -21,6 +21,7 @@ namespace YourStory.API.Controllers
 
         // POST user/signin
         [HttpPost]
+        [Route("/api/signin")]
         public Task<bool> SignIn(RegisterUser user)
         {
             return _userService.CreateUser(user);

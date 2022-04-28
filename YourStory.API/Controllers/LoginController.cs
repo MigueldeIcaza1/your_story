@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace YourStory.API.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
     {
@@ -31,6 +31,7 @@ namespace YourStory.API.Controllers
         // POST /login
         [AllowAnonymous]
         [HttpPost]
+        [Route("/api/login")]
         public async Task<IActionResult> Login(LoginUser request)
         {
             if (!ModelState.IsValid)
