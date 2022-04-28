@@ -19,9 +19,9 @@ namespace YourStory.API.Controllers
             _ContactService = ContactService;
         }
 
-        // POST api/Contact/PostContact
+        // POST api/Contact/CreateContact
         [HttpPost]
-        [Route("/api/Contact/PostContact")]
+        [Route("/api/Contact/CreateContact")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]

@@ -49,6 +49,18 @@ export class Write extends React.Component {
             isValid = false;
             this.setState({ isDescriptionTouched: true });
         }
+        if (this.state.title && this.state.title.length > 500) {
+            isValid = false;
+            this.setState({ isTitleTouched: true });
+        }
+        if (this.state.userName && this.state.title.length > 50) {
+            isValid = false;
+            this.setState({ isUserNameTouched: true });
+        }
+        if (this.state.tagName && this.state.tagName.length > 500) {
+            isValid = false;
+            this.setState({ isTagNameTouched: true });
+        }
         return isValid;
     }
 
@@ -138,6 +150,7 @@ export class Write extends React.Component {
                                                 </div>
                                             </div>
                                             {this.state.isTitleTouched && !this.state.title && <span className='validation-label bx-form-requirement'>This field is required</span>}
+                                            {this.state.title && this.state.title.length > 500 && <span className='validation-label bx-form-requirement'>Should not be more than 500 characters</span>}
                                         </div>
                                     </div>
 
@@ -151,6 +164,7 @@ export class Write extends React.Component {
                                                 </div>
                                             </div>
                                             {this.state.isUserNameTouched && !this.state.userName && <span className='validation-label bx-form-requirement'>This field is required</span>}
+                                            {this.state.userName && this.state.userName.length > 50 && <span className='validation-label bx-form-requirement'>Should not be more than 50 characters</span>}
                                         </div>
                                     </div>
 
@@ -164,6 +178,7 @@ export class Write extends React.Component {
                                                 </div>
                                             </div>
                                             {this.state.isTagNameTouched && !this.state.tagName && <span className='validation-label bx-form-requirement'>This field is required</span>}
+                                            {this.state.tagName && this.state.tagName.length > 500 && <span className='validation-label bx-form-requirement'>Should not be more than 500 characters</span>}
                                         </div>
                                     </div>
 
