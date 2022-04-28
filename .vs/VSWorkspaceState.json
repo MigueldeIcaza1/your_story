@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public"
+    "\\YourStory.API",
+    "\\YourStory.API\\Controllers"
   ],
+  "SelectedNode": "\\YourStory.API\\YourStory.API.sln",
   "PreviewInSolutionExplorer": false
 }
