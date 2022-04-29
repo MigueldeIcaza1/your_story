@@ -24,7 +24,7 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        working-directory: your_story/YourStory.API/YourStory.API.csproj
+        working-directory: YourStory.API/YourStory.API.csproj
         run: dotnet build --configuration Release
 
       - name: dotnet publish
