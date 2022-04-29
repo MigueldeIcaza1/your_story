@@ -50,6 +50,15 @@ export class Contact extends React.Component {
             isValid = false;
             this.setState({ isMessageTouched: true });
         }
+        if (!this.validateEmail(this.state.emailAddress)) {
+            isValid = false;
+            this.setState({ isEmailAddressTouched: true });
+        }
+        if (this.state.confirmEmailAddress && this.state.emailAddress &&
+            this.state.emailAddress.trim() !== this.state.confirmEmailAddress.trim()) {
+            isValid = false;
+            this.setState({ isConfirmEmailAddressTouched: true });
+        }
         return isValid;
     }
 
@@ -182,7 +191,7 @@ export class Contact extends React.Component {
                                                 </div>
                                             </div>
                                             {this.state.isConfirmEmailAddressTouched && !this.state.confirmEmailAddress && <span className='validation-label bx-form-requirement'>This field is required</span>}
-                                            {this.state.isConfirmEmailAddressTouched && this.state.confirmEmailAddress && this.state.emailAddress &&
+                                            {this.state.confirmEmailAddress && this.state.emailAddress &&
                                                 this.state.emailAddress.trim() !== this.state.confirmEmailAddress.trim() && <span className='validation-label bx-form-requirement'>Confirm Email Address mismatch</span>}
                                         </div>
                                     </div>
