@@ -54,12 +54,12 @@ export class MiddleContent extends React.Component {
     render() {
         return (
             <div>{!this.state.stories || this.state.stories.length === 0 ? <div></div> :
-                <div className='main-contianer mb-5'>
+                <div className='main-contianer'>
 
                     <div className="container py-5">
-                        <div className="row contianer-row">
+                        <div className="row">
 
-                            <div className="col-md-3">
+                            <div className="col-12 col-md-3 mb-4 mb-md-0">
                                 <h2 className='text-black side-title'>Explore stories, experiences and lessons</h2>
                                 <a href="/explore" className="btn-link btn-text float-start">Read all
                                     <svg focusable="false" className="ms-2" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" aria-label="View this link" width="20" height="20" viewBox="0 0 20 20" slot="icon"><path d="M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"></path></svg>
@@ -67,7 +67,7 @@ export class MiddleContent extends React.Component {
                             </div>
 
                             {this.state.stories.map((item, index) => (
-                                <div className="col-md-3" key={index}>
+                                <div className="col-12 col-md-3 mb-4 mb-md-0" key={index}>
                                     <div className="card h-100" onClick={() => this.navigateToStory(item.id)}>
                                         <img className="card-img-top" src={require(`./../../img/write${index + 1}.jpg`)} alt="Write" />
                                         <div className="card-body">

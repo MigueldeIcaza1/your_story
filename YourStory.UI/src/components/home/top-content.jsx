@@ -14,7 +14,7 @@ export class TopContent extends React.Component {
                         {/* Someone */}
                         {/* <h2>Share your experience </h2> */}
                         </span>
-                        <div className='bottom-left'>
+                        <div className='bottom-left mobile-right-margin'>
                             <div className='content-title title-2'><h4>Everyone is a writer at least once in their life</h4></div>
                             <a href='write' className='btn btn-primary share-btn'>Share the lesson that you have learnt
                                 <svg focusable="false" className="ms-2 ibm-duo-u--link-icon--arrow-right" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" aria-label="View this link" width="20" height="20" viewBox="0 0 20 20" slot="icon"><path d="M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"></path></svg>
