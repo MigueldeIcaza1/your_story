@@ -18,6 +18,7 @@ namespace YourStory.API.Controllers
 {
     //[Route("api/[controller]")]
     [ApiController]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class LoginController : ControllerBase
     {
         private IConfiguration _config;

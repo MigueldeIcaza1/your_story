@@ -11,6 +11,7 @@ namespace YourStory.API.Controllers
 {
     //[Route("api/[controller]/[action]")]
     [ApiController]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;

@@ -82,6 +82,7 @@ namespace YourStory.API
               );
 
             app.UseSwagger();
+            app.UseSwaggerUI(x => x.SwaggerEndpoint("/swagger/v1/swagger.json", "Writings API"));
 
             app.UseMiddleware<ExceptionHandlerMiddleware>();
 
