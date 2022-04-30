@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
+using YourStory.API.Common;
 
 namespace YourStory.API.Middlewares
 {
@@ -18,7 +20,7 @@ namespace YourStory.API.Middlewares
             _next = next;
         }
 
-        public async Task Invoke(HttpContext context)
+        public async Task Invoke(HttpContext context, IConfiguration configuration)
         {
             try
             {
@@ -47,6 +49,7 @@ namespace YourStory.API.Middlewares
 
                 var result = JsonSerializer.Serialize(new { message = error?.Message });
                 await response.WriteAsync(result);
+                await SqlExceptionLogger.Log(error, configuration.GetConnectionString("localDB"));
             }
         }
     }

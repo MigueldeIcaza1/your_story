@@ -29,5 +29,9 @@ namespace YourStory.API.Common
         public const string CreateContact = @"INSERT INTO Contact (FirstName, LastName, EmailAddress, Message, PhoneNo, JobRole, CreatedOn)
                                                      VALUES(@FirstName, @LastName, @EmailAddress, @Message, @PhoneNo, @JobRole, @CreatedOn)";
 
+
+        public const string LogException = @"INSERT INTO ExceptionLog (CreatedOn, Source, Message, StackTrace)
+                                                     VALUES(@CreatedOn, @Source, @Message, @StackTrace)";
+
     }
 }
