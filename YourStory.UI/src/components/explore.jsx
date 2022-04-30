@@ -89,7 +89,7 @@ export class Explore extends React.Component {
             <div>{!this.state.stories ? <div>Loading...</div> :
                 <div>
 
-                    <div className='text-start bg-black text-white p-5'><h1>Blogs</h1></div>
+                    <div className='text-start bg-black text-white p-5'><h1>Blog</h1></div>
 
                     <div className="explore-container text-start pb-5 pt-5">
 
