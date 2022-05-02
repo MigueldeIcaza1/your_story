@@ -10,7 +10,8 @@ Lots of expectations, difference in opinions, frictions, fighting, dealing with 
 
  
 
-For example, if u go to a beach and looking from the surface.. 
+For example, 
+If u go to a beach and looking from the surface.. 
 
 we can see pleasant waves, fresh air, blue sky and a beautiful view.  
 
@@ -22,7 +23,8 @@ Salt water, no air, suffocation, sharks and snakes, under water pressure etc... 
 
  
 
-One more example, if we look at the moon at night from earth.. 
+One more example, 
+If we look at the moon at night from earth.. 
 
 We can feel cool climate, calm and charming moon light 
 
@@ -38,13 +40,12 @@ But if we get too much attached to him/her... things may reverse. So don’t get
 
  
 
-This don’t mean that don’t mingle with anyone and go to Island and live there.. What I mean is that if you like or love or living with a person, see him only from the surface don’t go deep. 
+This don’t mean that don’t mingle with anyone, go to Island and live there.. 
+What I mean is that if you like or love or living with a person, see him only from the surface don’t go deep. 
 
  
 
 As *Gautham said.. "Attachment leads to suffering" 
-
- 
 
 So, don’t get too close or too attached to anyone including your family members, friends, relatives and others. 
 
@@ -52,8 +53,7 @@ Stay busy in your own way and create your own big world!!!
 
  
 
-It wasn’t me!
-What if someone attached to you................  that's a different story!! 😁 
+What if someone attached to you.... that's a different story!! 😁 
 
  
 
@@ -61,29 +61,35 @@ What if someone attached to you................  that's a different story!! 😁
 
  
 
-_____________________________________________________________________________________Note: *Gautham is not my friend. Gautham means Gautama Buddha...😉 
+_____________________________________________________________________________________
+Note: *Gautham is not my friend. Gautham means Gautama Buddha...😉 
 
 
 
 
-The Second Arrow
-
-
-The Buddha once asked a student, 
+The Buddha once asked a student:
 	“If a person is struck by an arrow, is it painful?” 
-The student replied, 
+
+The student replied:
 	“It is.” 
-	The Buddha then asked, 
+
+The Buddha then asked:
 	“If the person is struck by a second arrow, is that even more painful?” 
-The student replied again,
+
+The student replied again:
 	“It is.” 
+
 The Buddha then explained, 
-	“In life, we cannot always control the first arrow. However, the second arrow is our reaction to the first. And with this second arrow comes the possibility of choice.
+	“In life, we cannot always control the first arrow. However, the second arrow is our reaction to the first. And with this second arrow comes the possibility of choice."
 
 While we can’t control our outside environment, we can, with practice, change this pattern of shooting a second arrow after the first. 
-There are two very effective exercises which you can practice in order to circumvent this all-too-human response to life – 
-firstly, noticing the pattern of the second arrow and 
-secondly, practicing kindness to yourself when you see it.
+
+AVOID THE SECOND ARROW:
+So, how do you avoid the second arrow? First, notice the first arrow. When you are in emotional pain, allow yourself to feel it. You may notice your arrows in other ways, like frustration, irritation, and emotional or physical pain. Next, become aware and notice your emotional reaction. Maybe it is a desire to yell or complain to someone. Maybe you get angry with yourself and turn your emotions inward, feeling like you aren’t good enough or that there is something wrong with you. This is the second arrow. Catch yourself adding more pain and suffering. Finally, give yourself credit for recognizing and avoiding the second arrow. You are learning a new response. You can free up energy for circumstances you can control. However, you can also always adjust your reaction, even if you can’t control what happens to you.
+
+We probably find ourselves dealing with the second arrow of suffering many times during the day. The story is not about denying our initial reaction, but to have a choice of how to proceed. Over time, being aware of this choice, and refraining from shooting endless second arrows at ourselves, can help free us of much unnecessary suffering.
+
+
 
 
 

@@ -80,9 +80,13 @@ export class Contact extends React.Component {
         };
 
         postContact(request).then(response => {
-            if (response === true) { }
+            if (response === true) { 
+                toast.success("Saved! Our team will contact you soon.");
+                setTimeout(() => this.props.navigate('/home'), 2000);
+            }
             // else { this.showErrorToast(); }
-            this.props.navigate('/home');
+            
+            // this.props.navigate('/home');
         }, () => { this.showErrorToast(); }
         ).catch((error) => {
             this.showErrorToast();
@@ -245,7 +249,7 @@ export class Contact extends React.Component {
                 </div>
 
                 <ToastContainer
-                    position="top-right"
+                    position="bottom-right"
                     autoClose={2000}
                 />
 
